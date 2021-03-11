@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  background-color: rgb(243, 243, 243);
+}
+
+.nav-items-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-items-ctn li {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
+.nav-items-ctn li a {
+  padding: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 8px;
+}
+
+.fa-seedling {
+  padding-right: 0.1rem;
+  font-size: 1.8rem;
+  color: rgb(113, 184, 95);
+}
