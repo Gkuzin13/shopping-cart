@@ -1,4 +1,4 @@
-# Shopping Cart App
+# Shopping Cart 
 
 A minimalistic website for a company that makes smoothies.
 
