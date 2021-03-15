@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.40312a6f.chunk.css",
-    "main.js": "/shopping-cart/static/js/main.0eb1adda.chunk.js",
-    "main.js.map": "/shopping-cart/static/js/main.0eb1adda.chunk.js.map",
-    "runtime-main.js": "/shopping-cart/static/js/runtime-main.b6a2e420.js",
-    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b6a2e420.js.map",
-    "static/js/2.a2ffd2d1.chunk.js": "/shopping-cart/static/js/2.a2ffd2d1.chunk.js",
-    "static/js/2.a2ffd2d1.chunk.js.map": "/shopping-cart/static/js/2.a2ffd2d1.chunk.js.map",
-    "index.html": "/shopping-cart/index.html",
-    "static/css/main.40312a6f.chunk.css.map": "/shopping-cart/static/css/main.40312a6f.chunk.css.map",
-    "static/js/2.a2ffd2d1.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.a2ffd2d1.chunk.js.LICENSE.txt",
-    "static/media/beetroot-bottle-fruit.0717b2ab.jpg": "/shopping-cart/static/media/beetroot-bottle-fruit.0717b2ab.jpg",
-    "static/media/collection-bottle-fruits.ecdef328.jpg": "/shopping-cart/static/media/collection-bottle-fruits.ecdef328.jpg",
-    "static/media/Home.css": "/shopping-cart/static/media/flatlay-main.72b9b8de.jpg",
-    "static/media/greens-bottle-fruits.f6a69803.jpg": "/shopping-cart/static/media/greens-bottle-fruits.f6a69803.jpg",
-    "static/media/orange-bottle-fruits.0de90495.jpg": "/shopping-cart/static/media/orange-bottle-fruits.0de90495.jpg",
-    "static/media/pitaya-bottle-fruits.d790db19.jpg": "/shopping-cart/static/media/pitaya-bottle-fruits.d790db19.jpg",
-    "static/media/strawberry-bottle-fruits.edb68c0d.jpg": "/shopping-cart/static/media/strawberry-bottle-fruits.edb68c0d.jpg"
+    "main.css": "/static/css/main.b67fc581.chunk.css",
+    "main.js": "/static/js/main.f95dc716.chunk.js",
+    "main.js.map": "/static/js/main.f95dc716.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f130796d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f130796d.js.map",
+    "static/js/2.40c480fd.chunk.js": "/static/js/2.40c480fd.chunk.js",
+    "static/js/2.40c480fd.chunk.js.map": "/static/js/2.40c480fd.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b67fc581.chunk.css.map": "/static/css/main.b67fc581.chunk.css.map",
+    "static/js/2.40c480fd.chunk.js.LICENSE.txt": "/static/js/2.40c480fd.chunk.js.LICENSE.txt",
+    "static/media/beetroot-bottle-fruit.0717b2ab.jpg": "/static/media/beetroot-bottle-fruit.0717b2ab.jpg",
+    "static/media/collection-bottle-fruits.ecdef328.jpg": "/static/media/collection-bottle-fruits.ecdef328.jpg",
+    "static/media/Home.css": "/static/media/flatlay-main.72b9b8de.jpg",
+    "static/media/greens-bottle-fruits.f6a69803.jpg": "/static/media/greens-bottle-fruits.f6a69803.jpg",
+    "static/media/orange-bottle-fruits.0de90495.jpg": "/static/media/orange-bottle-fruits.0de90495.jpg",
+    "static/media/pitaya-bottle-fruits.d790db19.jpg": "/static/media/pitaya-bottle-fruits.d790db19.jpg",
+    "static/media/strawberry-bottle-fruits.edb68c0d.jpg": "/static/media/strawberry-bottle-fruits.edb68c0d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6a2e420.js",
-    "static/js/2.a2ffd2d1.chunk.js",
-    "static/css/main.40312a6f.chunk.css",
-    "static/js/main.0eb1adda.chunk.js"
+    "static/js/runtime-main.f130796d.js",
+    "static/js/2.40c480fd.chunk.js",
+    "static/css/main.b67fc581.chunk.css",
+    "static/js/main.f95dc716.chunk.js"
   ]
 }
