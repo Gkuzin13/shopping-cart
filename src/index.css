@@ -71,3 +71,9 @@ button:active {
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
 }
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

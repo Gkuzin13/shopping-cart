@@ -21,16 +21,40 @@ nav {
 .nav-items-ctn li a {
   padding: 0.5rem;
 }
+.nav-basket-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: 8px;
+  color: rgb(82, 82, 82);
 }
 
 .fa-seedling {
   padding-right: 0.1rem;
   font-size: 1.8rem;
   color: rgb(113, 184, 95);
+}
+
+.nav-item-count {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(113, 184, 95);
+  padding: 0 0.4rem;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 2rem;
+  }
 }

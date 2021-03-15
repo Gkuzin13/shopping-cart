@@ -2,6 +2,12 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ basketItems }) => {
+  const totalItems = [...basketItems]
+    .map((items) => items.quantity)
+    .reduce((num1, num2) => {
+      return num1 + num2;
+    }, 0);
+
   return (
     <div>
       <nav>
@@ -19,11 +25,11 @@ const Navbar = ({ basketItems }) => {
           <li>
             <NavLink to='/shop'>Market</NavLink>
           </li>
-          <li>
-            <NavLink to='/cart'>
-              Basket{' '}
-              <strong style={{ color: 'green' }}>{`(${basketItems})`}</strong>
-            </NavLink>
+          <li className='nav-basket-ctn'>
+            <NavLink to='/cart'>Basket </NavLink>
+            <span className='nav-item-count'>
+              {basketItems.length === 0 ? 0 : totalItems}
+            </span>
           </li>
         </ul>
       </nav>

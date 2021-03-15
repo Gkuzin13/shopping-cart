@@ -15,6 +15,7 @@ const Data = [
     price: '5',
     img: orange_bottle_main,
     altImg: '',
+    quantity: 1,
   },
   {
     id: uuid(),
@@ -24,6 +25,7 @@ const Data = [
     price: '5',
     img: green_bottle_main,
     altImg: '',
+    quantity: 1,
   },
   {
     id: uuid(),
@@ -33,6 +35,7 @@ const Data = [
     price: '7',
     img: beetroot_bottle_main,
     altImg: '',
+    quantity: 1,
   },
   {
     id: uuid(),
@@ -42,6 +45,7 @@ const Data = [
     price: '7',
     img: strawberr_bottle_main,
     altImg: '',
+    quantity: 1,
   },
   {
     id: uuid(),
@@ -51,6 +55,7 @@ const Data = [
     price: '7',
     img: pitaya_bottle_main,
     altImg: '',
+    quantity: 1,
   },
   {
     id: uuid(),
@@ -61,6 +66,7 @@ const Data = [
     price: '40',
     img: collection_bottle_main,
     altImg: '',
+    quantity: 1,
   },
 ];
 

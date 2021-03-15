@@ -2,12 +2,20 @@ import { v4 as uuid } from 'uuid';
 import './Basket.css';
 import { Link } from 'react-router-dom';
 
-const Basket = ({ basketItems, removeItem }) => {
+const Basket = ({
+  basketItems,
+  removeItem,
+  handleInputChange,
+  incrementQuantity,
+  decrementQuantity,
+}) => {
   const totalAmount = basketItems
-    .map((item) => parseInt(item.price))
+    .map((item) => parseInt(item.price * item.quantity))
     .reduce(function (num1, num2) {
       return num1 + num2;
     }, 0);
+
+  console.log(basketItems);
 
   return (
     <div className='basket-ctn'>
@@ -36,7 +44,7 @@ const Basket = ({ basketItems, removeItem }) => {
           {basketItems.length === 0 ? (
             <div>Basket is empty</div>
           ) : (
-            basketItems.map((item) => {
+            basketItems.map((item, index) => {
               return (
                 <div className='basket-item' key={uuid()}>
                   <div className='basket-item-img-ctn'>
@@ -44,17 +52,39 @@ const Basket = ({ basketItems, removeItem }) => {
                   </div>
                   <div className='basket-item-details'>
                     <h2>{item.name}</h2>
-                    <p>Ingredients: {item.ingredients}</p>
-                    <p>Price: {item.price}$</p>
-                    <div>
-                      <label>Quantity: </label>
-                      <input type='number' style={{ width: '3rem' }} />
+                    <p>
+                      <strong>Ingredients:</strong> {item.ingredients}
+                    </p>
+                    <p>
+                      <strong>Price:</strong> {item.price}$
+                    </p>
+                    <div className='quantity-ctn'>
+                      <button
+                        type='button'
+                        className='quantity-btn'
+                        onClick={() => decrementQuantity(index)}
+                      >
+                        <i className='fas fa-minus'></i>
+                      </button>
+                      <input
+                        type='number'
+                        value={item.quantity}
+                        onChange={(e) => handleInputChange(index, e)}
+                      />
+                      <button
+                        type='button'
+                        className='quantity-btn'
+                        onClick={() => incrementQuantity(index)}
+                      >
+                        <i className='fas fa-plus'></i>
+                      </button>
                     </div>
                     <button
+                      type='button'
                       className='basket-remove-btn'
                       onClick={() => removeItem(item)}
                     >
-                      Remove
+                      Delete
                     </button>
                   </div>
                 </div>

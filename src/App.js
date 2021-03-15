@@ -4,31 +4,75 @@ import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 import Home from './components/Home';
 import Basket from './components/Basket';
-import { v4 as uuid } from 'uuid';
 
 const App = () => {
   const [basketItems, setBasketItems] = useState([]);
 
-  const addItemToBasket = (item) => {
-    // Gives Item new ID so each new item
-    // in the basket will have unique one.
-    const newItem = {
-      ...item,
-      id: uuid(),
-    };
-    setBasketItems((oldItems) => oldItems.concat(newItem));
-    console.log(newItem);
+  const incrementQuantity = (index) => {
+    const newItems = [...basketItems];
+
+    newItems[index].quantity++;
+
+    setBasketItems(newItems);
   };
 
-  const removeItemFromBasket = (item) => {
-    const newItems = basketItems.filter((items) => items.id !== item.id);
+  const decrementQuantity = (index) => {
+    const newItems = [...basketItems];
+
+    newItems[index].quantity--;
+
     setBasketItems(newItems);
+  };
+
+  const addItemToBasket = (selectedItem) => {
+    // Adds quantity to matched item if it isn't in the basket
+    const newItems = basketItems.map((items) => {
+      const itemsCopy = { ...items };
+
+      if (itemsCopy.id === selectedItem.id) {
+        itemsCopy.quantity++;
+      }
+
+      return itemsCopy;
+    });
+
+    // If item isn't in the basket, adds the selected item
+    if (
+      !newItems.some((item) => {
+        return item.id === selectedItem.id;
+      })
+    ) {
+      setBasketItems((oldItems) => [...oldItems, selectedItem]);
+    } else {
+      setBasketItems(newItems);
+    }
+
     console.log(basketItems);
+  };
+
+  const removeItemFromBasket = (selectedItem) => {
+    const newItems = [...basketItems].filter(
+      (items) => items.id !== selectedItem.id
+    );
+
+    setBasketItems(newItems);
+
+    if (newItems.length === 0) {
+      setBasketItems(newItems);
+    }
+  };
+
+  const handleInputChange = (index, e) => {
+    const newItems = [...basketItems];
+
+    newItems[index].quantity = e.target.value;
+
+    setBasketItems(newItems);
   };
 
   return (
     <Router>
-      <Navbar basketItems={basketItems.length} />
+      <Navbar basketItems={basketItems} />
 
       <Switch>
         <Route path='/' exact component={Home} />
@@ -42,6 +86,9 @@ const App = () => {
             <Basket
               basketItems={basketItems}
               removeItem={removeItemFromBasket}
+              handleInputChange={handleInputChange}
+              incrementQuantity={incrementQuantity}
+              decrementQuantity={decrementQuantity}
             />
           )}
         />

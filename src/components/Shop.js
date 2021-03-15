@@ -5,17 +5,18 @@ import Data from './Data';
 
 const Shop = ({ addItemToBasket }) => {
   const [itemId, setItemId] = useState('');
-
+  const smoothies = [...Data];
+  console.log();
   return (
     <div className='shop-content'>
-      <h2 className='shop-heading'>Our Smoothies</h2>
+      <h2 className='shop-heading'>Our smoothies</h2>
       <h3 className='shop-heading'>
-        Made from <span style={{ color: 'green' }}> Organic</span> Fruits and
-        Vegetables
+        Made from <span style={{ color: 'green' }}> organic</span> fruits and
+        vegetables
       </h3>
 
       <div className='shop-items-ctn'>
-        {Data.map((item) => {
+        {[...smoothies].map((item) => {
           return (
             <div
               key={item.id}
@@ -41,7 +42,7 @@ const Shop = ({ addItemToBasket }) => {
                   }
                   id={item.id}
                 >
-                  <div>
+                  <div className='item-desc'>
                     <h3>Ingredients: </h3>
                     <p>{item.ingredients}</p>
                   </div>
