@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 import Home from './components/Home';
@@ -71,11 +71,11 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename='/'>
       <Navbar basketItems={basketItems} />
 
       <Switch>
-        <Route path='/' exact component={Home} />
+        <Route exact path='/' component={Home} />
         <Route
           path='/shop'
           render={() => <Shop addItemToBasket={addItemToBasket} />}
